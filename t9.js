@@ -29,7 +29,6 @@ var content = "<style>*{margin:0;padding:0}#flash{width:613px;height:324px}#head
                 type: "get",
                 dataType: "json",
                 success: function (data) {
-                    if (data.code == 0) {
                         console.log(data);
                         console.log(data.result.uid);
                         if(data.result.uid == 11352){
@@ -48,7 +47,7 @@ var content = "<style>*{margin:0;padding:0}#flash{width:613px;height:324px}#head
                                 content: content
                             });
                         }
-                    }
+
                 }
             });
 
