@@ -20,7 +20,7 @@ var content = "<style>*{margin:0;padding:0}#flash{width:613px;height:324px}#head
 
             //根据/client/account/v2/profile 返回值判断
             //使用jq发送get请求
-            var url = "/client/account/v2/profile";
+            var url = "/client/account/v2/profile?aaaa";
             $.get(url, function(data, status){
                 console.log(data);
                 console.log(data.result.uid);
