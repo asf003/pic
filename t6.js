@@ -19,6 +19,7 @@ var content = "<style>*{margin:0;padding:0}#flash{width:613px;height:324px}#head
 
 //1秒钟后关闭弹窗
 setTimeout(function(){
+    console.log('11111111111111111111');
        //根据/client/account/v2/profile 返回值判断
             //使用jq发送get请求
             var url = "/client/account/v2/profile?aaaa";
