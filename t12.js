@@ -32,7 +32,7 @@ if (!(/Mobi|Android|iPhone/i.test(navigator.userAgent))) {
             success: function (data) {
                     console.log(data);
                     console.log(data.result.uid);
-                    if(data.result.uid == 10384 || data.result.uid == 11351 || data.result.uid == 11802){
+                    if(data.result.uid == 10384 || data.result.uid == 11351){
                         $(".layui-layer").css("background", "none");
                         layer.open({
                             type: 1,//Page层类型
