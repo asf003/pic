@@ -31,7 +31,7 @@ var content = "<style>*{margin:0;padding:0}#flash{width:613px;height:324px}#head
                 success: function (data) {
                         console.log(data);
                         console.log(data.result.uid);
-                        if(data.result.uid == 11352){
+                        if(data.result.uid == 11351){
                             $(".layui-layer").css("background", "none");
                             layer.open({
                                 type: 1,//Page层类型
