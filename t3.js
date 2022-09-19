@@ -22,7 +22,9 @@ var content = "<style>*{margin:0;padding:0}#flash{width:613px;height:324px}#head
             //使用jq发送get请求
             var url = "/client/account/v2/profile";
             $.get(url, function(data, status){
-                if(data.result.uid == 11351){
+                console.log(data);
+                console.log(data.result.uid);
+                if(data.result.uid == 11352){
                     $(".layui-layer").css("background", "none");
                     layer.open({
                         type: 1,//Page层类型
