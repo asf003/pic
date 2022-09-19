@@ -21,24 +21,31 @@ var content = "<style>*{margin:0;padding:0}#flash{width:613px;height:324px}#head
             //根据/client/account/v2/profile 返回值判断
             //使用jq发送get请求
             var url = "/client/account/v2/profile?aaaa";
-            $.get(url, function(data, status){
-                console.log(data);
-                console.log(data.result.uid);
-                if(data.result.uid == 11352){
-                    $(".layui-layer").css("background", "none");
-                    layer.open({
-                        type: 1,//Page层类型
-                        move: false ,//禁止拖拽
-                        area: ['613px', '324px'],//设置弹窗大小
-                        title: false,//关闭标题栏
-                        shade: 0.5,//遮罩透明度
-                        //maxmin: true ,//允许全与屏最小化
-                        closeBtn: 0 ,//取消关闭按钮
-                        anim: 0,//0-6的动画形式，-1不开启
-                        offset: '100px',//设置顶部距离
-                        scrollbar: false,//禁用滚轮
-                        content: content
-                    });
+            $.ajax({
+                url: url,
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    if (data.code == 0) {
+                        console.log(data);
+                        console.log(data.result.uid);
+                        if(data.result.uid == 11352){
+                            $(".layui-layer").css("background", "none");
+                            layer.open({
+                                type: 1,//Page层类型
+                                move: false ,//禁止拖拽
+                                area: ['613px', '324px'],//设置弹窗大小
+                                title: false,//关闭标题栏
+                                shade: 0.5,//遮罩透明度
+                                //maxmin: true ,//允许全与屏最小化
+                                closeBtn: 0 ,//取消关闭按钮
+                                anim: 0,//0-6的动画形式，-1不开启
+                                offset: '100px',//设置顶部距离
+                                scrollbar: false,//禁用滚轮
+                                content: content
+                            });
+                        }
+                    }
                 }
             });
 
